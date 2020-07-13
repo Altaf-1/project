@@ -17,4 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+Route::resource('/maggie', 'MaggieController',
+    ['names' =>[
+        'index'=>'maggie.index',
+        'create'=>'maggie.create',
+        'store'=>'maggie.store',
+        'edit'=>'maggie.edit',
+        'update'=>'maggie.update',
+        'show'=>'maggie.show',
+        'destroy'=>'maggie.destroy'
+    ]]);
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
