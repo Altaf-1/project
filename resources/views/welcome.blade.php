@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{route('maggie.index')}}">Maggie</a>
+                    <a href="{{asset('/maggie')}}}">Maggie</a>
                 </div>
             </div>
         </div>

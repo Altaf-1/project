@@ -14,7 +14,9 @@ class MaggieController extends Controller
      */
     public function index()
     {
-        //
+        $maggies= Maggie::all();
+        //dd($maggies);
+        return view('maggie.index',compact('maggies'));
     }
 
     /**
